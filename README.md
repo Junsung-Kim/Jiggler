@@ -25,8 +25,6 @@ pip install pynput pyautogui
 
 ## Installation
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/Junsung-Kim/Jiggler.git
 cd Jiggler
@@ -54,10 +52,10 @@ To stop the program, press `Ctrl+C`.
 
 ## Customization
 
-You can customize the inactivity timeout by modifying the following line in the script:
+You can customize the inactivity timeout by modifying the following constant in the script:
 
 ```python
-if not is_user_active and current_time - last_user_activity_time > 30:
+INACTIVITY_THRESHOLD = 30  # seconds
 ```
 
 Replace `30` with your desired timeout in seconds.
@@ -69,7 +67,7 @@ Replace `30` with your desired timeout in seconds.
 When the program simulates mouse movements, you’ll see logs like:
 
 ```plaintext
-Moved at 03:45:12 PM (1024, 768) <-> (500, 500)
+2025-01-08 03:45:12,123 - Mouse moved: (500, 500) -> (1024, 768)
 ```
 
 ---
